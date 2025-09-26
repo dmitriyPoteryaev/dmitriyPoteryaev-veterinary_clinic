@@ -1,0 +1,32 @@
+version: "3.9"
+
+networks:
+  appnet:
+    external: true   # используем сеть, которую создали вручную
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: yii2-php
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - COOKIE_VALIDATION_KEY=${COOKIE_VALIDATION_KEY}
+    networks:
+      - appnet
+    depends_on:
+      - nginx
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: yii2-nginx
+    ports:
+      - "8080:80"              # заходишь на http://localhost:8080
+    volumes:
+      - ./:/var/www/html:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - appnet
