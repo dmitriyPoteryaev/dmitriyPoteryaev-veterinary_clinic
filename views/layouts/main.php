@@ -11,9 +11,11 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use app\assets\HomeReactAsset;
 HomeReactAsset::register($this);
+use yii\helpers\Url;
 
 
 AppAsset::register($this);
+
 
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
@@ -32,45 +34,41 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
 
-<header id="header">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest
-                ? ['label' => 'Login', 'url' => ['/site/login']]
-                : '<li class="nav-item">'
-                    . Html::beginForm(['/site/logout'])
-                    . Html::submitButton(
-                        'Logout (' . Yii::$app->user->identity->username . ')',
-                        ['class' => 'nav-link btn btn-link logout']
-                    )
-                    . Html::endForm()
-                    . '</li>'
-        ]
-    ]);
-    NavBar::end();
-    ?>
+<header class="header">
+    
+  <div class="header__inner">
+
+    <div class="header__contacts">
+
+      <div class="header__logo">
+      <img src="/images/logo.png" alt="Логотип">
+      </div>
+
+    </div>
+
+    <div class="header__inform">
+    <nav class="header__nav">
+      <ul class="menu header__menu">
+        <li class="menu__item"><a class="menu__link" href="/about">О нас</a></li>
+        <li class="menu__item"><a class="menu__link" href="/prices">Услуги</a></li>
+        <li class="menu__item"><a class="menu__link" href="/prices">Цены</a></li>
+        <li class="menu__item"><a class="menu__link" href="/prices">Форма записи</a></li>
+      </ul>
+    </nav>
+    </div>
+
+     <div class="header__connect">
+      <a class="header__cta" href="#form">Связаться с нами</a>
+     </div>
+
+  </div>
+  
+
 </header>
 
-<main id="main" class="flex-shrink-0" role="main">
-    <div class="container">
-        <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
-        <?php endif ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</main>
+<main id="main" role="main">
 <div id="react-hello"></div>
+</main>
 <footer id="footer" class="mt-auto py-3 bg-light">
     <div class="container">
         <div class="row text-muted">
