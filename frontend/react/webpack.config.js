@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 module.exports = {
   mode: isProd ? 'production' : 'development',
   entry: {
-    home: './src/entries/home.tsx',
+    index: './src/index.tsx',
   },
   output: {
     path: path.resolve(__dirname, '../../web/react'),
