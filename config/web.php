@@ -14,6 +14,7 @@ $config = [
     'components' => [
         'request' => [
     'cookieValidationKey' => getenv('COOKIE_VALIDATION_KEY') ?: 'dev-fallback-key',
+    'parsers' => ['application/json' => 'yii\web\JsonParser'],
 ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -41,14 +42,14 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+         'rules' => [
+      'POST api/v1/appointments' => 'appointment/create',
+      'OPTIONS api/v1/appointments' => 'appointment/options',
+    ],
         ],
-        */
     ],
     'params' => $params,
 ];
