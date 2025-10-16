@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import Main from '../src/modules/main';
 import './styles/styles.css';
 
+
 function mount() {
   const el = document.getElementById('react-hello');
   if (!el || (el as any).__reactRoot) return;
