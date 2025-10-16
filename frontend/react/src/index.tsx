@@ -4,7 +4,7 @@ import './styles/styles.css';
 
 
 function mount() {
-  const el = document.getElementById('react-hello');
+  const el = document.getElementById('main');
   if (!el || (el as any).__reactRoot) return;
   const root = createRoot(el);
   (el as any).__reactRoot = root;

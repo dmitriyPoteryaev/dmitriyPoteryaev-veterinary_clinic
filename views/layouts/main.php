@@ -67,7 +67,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 </header>
 
 <main id="main" role="main">
-<div id="react-hello"></div>
 </main>
 <footer id="footer" class="mt-auto py-3 bg-light">
     <div class="container">
