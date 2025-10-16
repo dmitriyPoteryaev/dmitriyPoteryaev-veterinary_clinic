@@ -371,3 +371,60 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+
+/* price.css — подключи рядом с компонентом */
+:root{
+  --brand-red:#f36b78;         /* основной красный сайта */
+  --card-bg:#fff;
+  --shadow:0 8px 24px rgba(0,0,0,.08);
+  --radius:20px;
+}
+
+.priceCard{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
+}
+
+.priceList{
+  margin:0;
+  padding:0 10px;
+  list-style:none;
+  border:1px solid #f0f0f0;
+  border-radius:14px;
+}
+
+.priceRow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+}
+
+.priceRow + .priceRow{
+  border-top:1px dashed #eee;
+}
+
+.priceName{
+  flex:1 1 auto;
+  font-size:16px;
+}
+
+.priceDots{
+  flex:1 1 100%;
+  height:1px;
+  background-image:radial-gradient(#cfcfcf 1px, transparent 1px);
+  background-size:6px 1px;
+  background-repeat:repeat-x;
+  background-position:left center;
+}
+
+.priceValue{
+  flex:0 0 auto;
+  font-weight:800;
+  letter-spacing:.2px;
+  white-space:nowrap;
+  color:#111;
+}
