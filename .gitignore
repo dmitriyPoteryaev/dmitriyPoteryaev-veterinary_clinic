@@ -35,3 +35,7 @@ tests/_support/_generated
 # React/Node
 /frontend/react/node_modules/
 # /web/react/*
+
+
+# Ignore MySQL data
+docker/mysql/data/

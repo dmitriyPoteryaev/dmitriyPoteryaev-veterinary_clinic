@@ -187,3 +187,120 @@
   padding: 0;
   margin: 16px 0 0;
 }
+
+.appointment-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 32px;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.appointment-form .two-columns {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .appointment-form .two-columns {
+    flex-direction: column;
+  }
+}
+
+.submit-btn {
+  border-radius: 8px !important;
+  height: 42px !important;
+  font-weight: 500 !important;
+}
+
+
+:root{
+  --brand-red: #ff4d4f;          /* основной акцент (светло-красный, как у Ant Design red-5) */
+  --brand-red-300: #ffccc7;      /* рамки/иконки */
+  --brand-red-100: #fff1f0;      /* мягкий фон карточек */
+  --text-main: #1f1f1f;
+  --text-muted: #6b6b6b;
+  --card-radius: 18px;
+  --gap: 16px;
+}
+
+.doctor-flow{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 12px;
+}
+
+.doctor-flow__title{
+  font-size: 28px;
+  line-height: 1.25;
+  margin: 0 0 14px;
+  color: var(--text-main);
+}
+
+.doctor-flow__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+@media (max-width: 860px){
+  .doctor-flow__list{ grid-template-columns: 1fr; }
+}
+
+.doctor-flow__item{
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 14px;
+  background: linear-gradient(0deg, #fff, #fff) padding-box,
+              linear-gradient(135deg, var(--brand-red-300), #ffd6d6) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--card-radius);
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(255, 77, 79, 0.08);
+}
+
+.doctor-flow__num{
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  display: grid; place-items: center;
+  font-weight: 700;
+  color: var(--brand-red);
+  background: var(--brand-red-100);
+  border: 1px solid var(--brand-red-300);
+}
+
+.doctor-flow__body h3{
+  margin: 2px 0 6px;
+  font-size: 18px;
+  color: var(--text-main);
+}
+.doctor-flow__body p{
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.doctor-flow__item:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(255, 77, 79, 0.12);
+}
+
+.doctor-flow__note{
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  background: var(--brand-red-100);
+  border: 1px dashed var(--brand-red-300);
+  padding: 10px 12px;
+  border-radius: 12px;
+}
