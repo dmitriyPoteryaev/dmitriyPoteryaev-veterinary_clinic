@@ -35,38 +35,34 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <?php $this->beginBody() ?>
 
 <header class="header">
-    
   <div class="header__inner">
+    <div class="header__inform">
+      <nav class="header__nav">
+        <!-- гамбургер -->
+        <button class="hamburger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="header__menu" id="mainMenu">
+          <li class="menu__item"><a class="menu__link" href="/about">О нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="/prices">Услуги</a></li>
+          <li class="menu__item"><a class="menu__link" href="/prices">Цены</a></li>
+          <li class="menu__item"><a class="menu__link" href="/prices">Форма записи</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <div class="header__contacts">
-
-      <div class="header__logo">
-      <img src="/images/logo.png" alt="Логотип">
-      </div>
-
-    </div>
-
-    <div class="header__inform">
-    <nav class="header__nav">
-      <ul class="menu header__menu">
-        <li class="menu__item"><a class="menu__link" href="/about">О нас</a></li>
-        <li class="menu__item"><a class="menu__link" href="/prices">Услуги</a></li>
-        <li class="menu__item"><a class="menu__link" href="/prices">Цены</a></li>
-        <li class="menu__item"><a class="menu__link" href="/prices">Форма записи</a></li>
-      </ul>
-    </nav>
-    </div>
-
-     <div class="header__connect">
       <a class="header__cta" href="#form">Связаться с нами</a>
-     </div>
+    </div>
 
+    <!-- подложка -->
+    <div class="menu-overlay" aria-hidden="true"></div>
   </div>
-  
-
 </header>
 
-<main id="main" role="main">
+
+<!-- <main id="main" role="main"> -->
 </main>
 <footer id="footer" class="mt-auto py-3 bg-light">
     <div class="container">
