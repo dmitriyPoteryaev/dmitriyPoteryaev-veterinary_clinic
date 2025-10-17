@@ -21,6 +21,8 @@
 
 .header__contacts {
    
+   width: 100%;
+   max-width: 150px;
    display: flex;
    justify-content: space-between;
 }
@@ -33,15 +35,9 @@
 
 .header__inform {
 
+   width: calc( 100% - 150px );
    display: flex;
    justify-content: space-between;
-}
-
-
-.header__inform {
-
-   width: 70%;
-
 }
 
 .header__nav { 
@@ -100,7 +96,7 @@
 /* ===== Мобилка ≤ 800px ===== */
 @media (max-width: 800px) {
 
-  .header__inner { margin: 0 20px; }
+  .header__inner { margin: 0 8px; }
 
   /* показываем кнопку */
   .hamburger { display: inline-block; }

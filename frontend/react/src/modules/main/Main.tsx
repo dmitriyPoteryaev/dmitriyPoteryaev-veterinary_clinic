@@ -8,7 +8,7 @@ import PriceList from "../../components/PriceList";
 export const Main: React.FC= () => {
 
   return (
-    <section>
+    <section style={{  "maxWidth": "1920px", "width": "100%" }}>
     <Advertaisment/>
     <Services/>
     <PaymentSteps/>

@@ -65,9 +65,8 @@
 
 .main-banner__content{
 
-   width: calc( 56% - 70px );
+   width: 56%;
    margin-top: 60px;
-   margin-left: 70px;
    display: flex;
    flex-direction: column;
 
@@ -95,6 +94,8 @@
 
 .main-banner__image{
 
+  display: flex;
+  justify-content: flex-end;
   width: 44%;
 }
 
