@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import Main from '../src/modules/main';
-import './styles/styles.css';
+import './styles/global.css';
 
 
 function mount() {

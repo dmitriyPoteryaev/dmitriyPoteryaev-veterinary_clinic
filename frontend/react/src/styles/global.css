@@ -1,0 +1,13 @@
+.main__block {
+
+margin: 0px 24px 0px 24px;
+max-width: 1920px; 
+width: 100%;
+}
+
+@media (max-width: 800px) {
+  .main__block {
+
+    margin: 0px 8px 0px 8px;
+  }
+}
