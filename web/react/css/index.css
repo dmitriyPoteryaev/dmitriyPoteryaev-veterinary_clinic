@@ -224,6 +224,93 @@
   }
 }
 
+/*!*************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/components/payment/payment.module.css ***!
+  \*************************************************************************************************************************/
+
+.payment-module__payment__kJEJG{
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 12px;
+}
+
+.payment-module__payment__title__CDRql{
+
+  font-size: 28px;
+  line-height: 1.25;
+  margin: 0 0 14px;
+  color: var(--text-main);
+}
+
+.payment-module__payment__list__o8FID{
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+@media (max-width: 860px){
+
+  .payment-module__payment__list__o8FID{ grid-template-columns: 1fr; }
+}
+
+.payment-module__payment__item__T0_gJ{
+
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 14px;
+  background: linear-gradient(0deg, #fff, #fff) padding-box,
+              linear-gradient(135deg, var(--brand-red-300), #ffd6d6) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--card-radius);
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(255, 77, 79, 0.08);
+}
+
+.payment-module__payment__num__XBD3n { 
+
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  display: grid; place-items: center;
+  font-weight: 700;
+  color: var(--brand-red);
+  background: var(--brand-red-100);
+  border: 1px solid var(--brand-red-300);
+}
+
+.payment-module__payment__body__Wz9Hg h3{
+
+  margin: 2px 0 6px;
+  font-size: 18px;
+  color: var(--text-main);
+}
+.payment-module__payment__body__Wz9Hg p{
+
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.payment-module__payment__item__T0_gJ:hover{
+
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(255, 77, 79, 0.12);
+}
+
+.payment-module__payment__note___W8tm{
+
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  background: var(--brand-red-100);
+  border: 1px dashed var(--brand-red-300);
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
 /*!**************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/components/services/service.module.css ***!
   \**************************************************************************************************************************/
