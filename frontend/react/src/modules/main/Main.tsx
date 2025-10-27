@@ -1,5 +1,5 @@
 import React from "react";
-import Advertaisment from "../../components/Advertaisment";
+import Advertaisment from "../../components/advertaisment/Advertaisment";
 import AppointmentForm from "../../components/AppointmentForm";
 import PaymentSteps from "../../components/PaymentSteps";
 import Services from "../../components/services/Services";
