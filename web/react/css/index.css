@@ -33,7 +33,7 @@
 
   margin-top: 20px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 22px;
   color: #222222;
   letter-spacing: 0;
   line-height: 1.4;
@@ -55,7 +55,7 @@
 
   display: block;
   width: 100%;
-  max-width: 220px;
+  max-width: 290px;
   border-radius: 20px;
   padding: 20px 20px;
   background-color: #f45b67;
@@ -63,7 +63,7 @@
   border: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.4;
   text-align: center;
   cursor: pointer;
@@ -88,12 +88,14 @@
 
 .advertaisment-module__stat__M__To {
 
-  display: grid; 
-  justify-items: start;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .advertaisment-module__stat__value__XqywG {
 
+  padding-right: 40px;
   margin-bottom: 6px;
   font-weight: 800;
   font-size: 56px;
@@ -106,9 +108,8 @@
 .advertaisment-module__stat__label__NZLxB {
 
   margin-top: 8px;
-  max-width: 260px;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 1.4;
   color: #222;
 }
@@ -120,7 +121,7 @@
 .advertaisment-module__stats__feature__raicm {
 
   margin-bottom: 6px;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.5;
   font-weight: 500;
   color: #222;
@@ -133,6 +134,94 @@
   list-style: none; 
   padding: 0;
   margin: 16px 0 0;
+}
+
+/* 1440px → 900px */
+@media (max-width: 1440px) and (min-width: 901px) {
+  
+  .advertaisment-module__mainBanner__kRUym {
+    /* остаётся в ряд */
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .advertaisment-module__mainBanner__content__pIu9J {
+
+     width: 70%;
+  }
+
+  .advertaisment-module__mainBanner__image__E35DG {
+    flex: 0 0 40%;
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .advertaisment-module__mainBanner__image__E35DG img {
+
+    max-width: 100%;
+    height: auto;        /* важное: не растягивать собаку вниз */
+    object-fit: contain;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .advertaisment-module__mainBanner__kRUym {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .advertaisment-module__mainBanner__content__pIu9J {
+
+    width: 100%;
+    flex: unset;
+  }
+
+  .advertaisment-module__mainBanner__image__E35DG {
+
+    margin-top: 30px;
+    width: 60%;
+    max-height: none;
+    flex: unset;
+    display: none;
+  }
+
+  .advertaisment-module__mainBanner__image__E35DG img {
+    width: 100%;
+    height: auto;
+  }
+
+  .advertaisment-module__mainBanner__subtitle__wtbnc {
+
+   margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .advertaisment-module__mainBanner__kRUym {
+    padding: 1.5rem 1rem;
+  }
+
+  .advertaisment-module__mainBanner__content__pIu9J h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .advertaisment-module__mainBanner__content__pIu9J p.advertaisment-module__subtextLong__Sne8D { 
+    display: none; /* опционально: скрыть длинный абзац опыта/описания */
+  }
+
+  .advertaisment-module__mainBanner__image__E35DG {
+    max-width: 260px;
+  }
 }
 
 /*!**************************************************************************************************************************!*\

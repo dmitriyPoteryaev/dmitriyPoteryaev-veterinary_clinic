@@ -17,17 +17,12 @@ const Advertisement: React.FC = () => {
 
 <section className={classes.stats} aria-labelledby="stats-title">
 
-  <h2 id="stats-title">Вас будет консультировать врач </h2>
+  <h2 id="stats-title">Вас будет консультировать врач, который </h2>
 
       <dl className={classes.stats__list}>
       <div className={classes.stat}>
-      <dd aria-label="4 года" className={classes.stat__value}>20</dd>
+      <dd aria-label="4 года" className={classes.stat__value}>30</dd>
       <dt className={classes.stat__label}>лет помогаем животным быть здоровыми</dt>
-    </div>
-
-    <div className={classes.stat}>
-      <dd aria-label="тридцать тысяч семьсот восемьдесят один" className={classes.stat__label}>128</dd>
-      <dt className={classes.stat__label}>успешных хирургических операций</dt>
     </div>
 
   </dl>
